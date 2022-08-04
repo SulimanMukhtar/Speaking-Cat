@@ -78,7 +78,7 @@ export const StyledLogo = styled.img`
 
 export const StyledImg = styled.img`
   box-shadow: 0px 5px 11px 2px rgba(0, 0, 0, 0.7);
-  border: 4px dashed var(--secondary);
+
   background-color: var(--accent);
   border-radius: 100%;
   width: 200px;
@@ -267,9 +267,8 @@ function App() {
                 style={{ padding: 24, backgroundColor: "var(--primary)" }}
                 image={CONFIG.SHOW_BACKGROUND ? "/config/images/bg.png" : null}
             >
-                <a href={CONFIG.MARKETPLACE_LINK}>
-                    <StyledLogo alt={"logo"} src={"/config/images/logo.png"} />
-                </a>
+                <s.SpacerLarge />
+                <s.SpacerLarge />
                 <s.SpacerSmall />
                 <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
                     <s.Container flex={1} jc={"center"} ai={"center"}>
@@ -284,7 +283,7 @@ function App() {
                             backgroundColor: "var(--accent)",
                             padding: 24,
                             borderRadius: 24,
-                            border: "4px dashed var(--secondary)",
+                            opacity: 0.8,
                             boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)",
                         }}
                     >
@@ -315,7 +314,7 @@ function App() {
                         >
                             <StyledButton
                                 onClick={(e) => {
-                                    window.open("https://discord.com", "_blank");
+                                    window.open("https://discord.gg/speakingcat", "_blank");
                                 }}
                                 style={{
                                     margin: "5px",

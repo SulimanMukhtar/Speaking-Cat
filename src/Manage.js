@@ -155,36 +155,6 @@ function App() {
                 setRoothash("Whitelist Mint Disabled");
             }
 
-            // .send({
-            //     from: blockchain.account,
-            //     to: CONFIG.CONTRACT_ADDRESS
-            // })
-            // .on('transactionHash', function (hash) {
-            //     console.log(hash)
-            // })
-            // .on('confirmation', async (confirmationNumber, receipt) => {
-
-            //     console.log(receipt)
-            //     console.log(confirmationNumber)
-            //     console.log(window.ethereum._events)
-            //     if (confirmationNumber > 0) {
-            //         // try {
-            //         //     await ethereum.removeAllListeners()
-            //         // } catch (err) {
-            //         //     console.log(err)
-            //         // }
-
-            //         await dispatch(fetchData(blockchain.account,1));
-            //         setwhitelistProcess(false);
-
-            //         if (state) {
-            //             setRoothash("Whitelist Mint Enabled , Make Sure You Edited the Addresses.txt file And Set The RootHash");
-            //         } else {
-            //             setRoothash("Whitelist Mint Disabled");
-            //         }
-            //     }
-
-            // });
         } catch (error) {
             console.log(error);
             setRoothash("Something Went Wrong , Please Try Again.");
@@ -210,34 +180,7 @@ function App() {
             } else {
                 setRoothash("Public Mint Enabled , Please Disable Whitelist Mint if Not Disabled");
             }
-            // .send({
-            //     from: blockchain.account,
-            //     to: CONFIG.CONTRACT_ADDRESS
-            // })
-            // .on('transactionHash', function (hash) {
-            //     console.log(hash)
-            // })
-            // .on('confirmation', async (confirmationNumber, receipt) => {
 
-            //     console.log(receipt)
-            //     console.log(confirmationNumber)
-            //     if (confirmationNumber > 0) {
-            //         try {
-            //             await ethereum.removeAllListeners()
-            //         } catch (err) {
-            //             console.log(err)
-            //         }
-            //         await dispatch(fetchData(blockchain.account,1));
-            //         setPublicProcess(false);
-
-            //         if (state) {
-            //             setRoothash("Public Mint Disabled");
-            //         } else {
-            //             setRoothash("Public Mint Enabled , Please Disable Whitelist Mint if Not Disabled");
-            //         }
-            //     }
-
-            // });
         } catch (error) {
             console.log(error);
             setRoothash("Something Went Wrong , Please Try Again.");
@@ -264,25 +207,7 @@ function App() {
                 let Res = await TX.wait(1)
                 console.log(Res)
                 setRoothash("Successfully Set Merkle Tree RootHash , You can Enable Whitelist if Not Enabled ")
-                // .call(
-                //     {
-                //         to: CONFIG.CONTRACT_ADDRESS,
-                //         from: blockchain.account
-                //     }
-                // ).then(async (receipt) => {
-                //     console.log(receipt);
-                //     setRoothash("Please Wait ...")
-                //     await blockchain.smartContract
-                //         .setMerkleRoot(hash).send(
-                //             {
-                //                 to: CONFIG.CONTRACT_ADDRESS,
-                //                 from: blockchain.account
-                //             }
-                //         )
 
-                //     setRoothash("Successfully Set Merkle Tree RootHash , You can Enable Whitelist if Not Enabled ")
-
-                // });
             }
             catch (error) {
                 console.log(error);
@@ -343,9 +268,8 @@ function App() {
                 style={{ padding: 24, backgroundColor: "var(--primary)" }}
                 image={CONFIG.SHOW_BACKGROUND ? "/config/images/bg.png" : null}
             >
-                <a href={CONFIG.MARKETPLACE_LINK}>
-                    <StyledLogo alt={"logo"} src={"/config/images/logo.png"} />
-                </a>
+                <s.SpacerLarge />
+                <s.SpacerLarge />
                 <s.SpacerSmall />
                 <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
                     <s.Container
